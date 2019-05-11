@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1557533184 source:c:\users\sidea\documents\array_employees\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../librerias/persona.h"
+
+1557531571 c:\users\sidea\documents\librerias\persona.h
+
+1557532745 source:c:\users\sidea\documents\librerias\persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"../librerias/persona.h"
+
+1557533046 source:c:\users\sidea\documents\input\input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
