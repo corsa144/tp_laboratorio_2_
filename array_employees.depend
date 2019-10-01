@@ -5,6 +5,8 @@
 	<string.h>
 	"../librerias/persona.h"
 
+1557532745 ias/persona.h"
+
 1557531571 c:\users\sidea\documents\librerias\persona.h
 
 1557532745 source:c:\users\sidea\documents\librerias\persona.c
@@ -18,4 +20,41 @@
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1557533046 
+
+1569969458 source:/home/cristian/Documents/tp_laboratorio_2_-master/informes.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn_validar.h"
+	"persona.h"
+	"informes.h"
+
+1569761076 /home/cristian/Documents/tp_laboratorio_2_-master/utn_validar.h
+
+1569764192 /home/cristian/Documents/tp_laboratorio_2_-master/persona.h
+
+1569969326 /home/cristian/Documents/tp_laboratorio_2_-master/informes.h
+
+1569969975 source:/home/cristian/Documents/tp_laboratorio_2_-master/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+	"utn_validar.h"
+	"informes.h"
+
+1569791269 source:/home/cristian/Documents/tp_laboratorio_2_-master/persona.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn_validar.h"
+	"persona.h"
+
+1569760978 source:/home/cristian/Documents/tp_laboratorio_2_-master/utn_validar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn_validar.h"
 

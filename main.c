@@ -1,40 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../librerias/persona.h"
+#include "persona.h"
+#include "utn_validar.h"
+#include "informes.h"
 
-#define CANT 3
+#define CANTIDAD_EMPLEADOS 1000
 
 int main(){
     int opcion;
-    eEmpleado pers[CANT];
+    int* contadorID=0;
+    eEmpleado persona[CANTIDAD_EMPLEADOS];
+    eEmpleado_inicializar(persona,CANTIDAD_EMPLEADOS);
+
     do{
-        printf("ingrese:\n1.Altas:\n2.Modificacion:\n3.Bajas:\n4.Listar:\n5.Listar salarios:\n6.Salir:");
-        scanf("%d",&opcion);
+        utn_getUnsignedInt("\n1-Alta:\n2-modificacion:\n3-baja:\n4-mostrar:\n5-mostrar por apellido y sector:\n6.mostrar salarios:\n7.salir:","\nError",0,sizeof(int),1,6,2,&opcion);
         switch(opcion){
             case 1:
-                alta( pers,CANT);
+                eEmpleado_alta( persona,CANTIDAD_EMPLEADOS,&contadorID);
                 break;
             case 2:
-                modificacion(pers,CANT);
+                if(contadorID>0){
+                eEmpleado_modificar(persona,CANTIDAD_EMPLEADOS);
+                }else{
+                    printf("\nNo se hizo ningun alta");
+                }
                 break;
             case 3:
-                baja(pers,CANT);
+                if(contadorID>0){
+                eEmpleado_baja(persona,CANTIDAD_EMPLEADOS);
+                }else{
+                    printf("\nNo se hizo ningun alta");
+                }
                 break;
             case 4:
-                system("cls");
-                mostrarTodos(pers,CANT);
-                system("pause");
+                if(contadorID>0){
+                eEmpleado_listar(persona,CANTIDAD_EMPLEADOS);
+                }else{
+                    printf("\nNo se hizo ningun alta");
+                }
                 break;
             case 5:
-                system("cls");
-                listarSalario(pers,CANT);
-                system("pause");
+                if(contadorID>0){
+                 ordenarPorApellidoYSector( persona,CANTIDAD_EMPLEADOS);
+                }else{
+                    printf("\nNo se hizo ningun alta");
+                }
                 break;
+            case 6:
+            if(contadorID>0){
+                 mostrarSalarios( persona,CANTIDAD_EMPLEADOS, contadorID);
+            }else{
+                printf("\nNo se hizo ningun alta");
+            }
+                break;
+            case 7:
+                break;
+            default:
+            printf("\nopcion incorrecta!!!");
         }
 
 
-    }while(opcion>=1&&opcion<=5);
+    }while(opcion!=7);
 
     return 0;
 }
